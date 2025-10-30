@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🛒 Shopping Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>🛍️ Modern Shopping Cart</h1>
+  </header>
+
+  <main>
+    <!-- ===== PRODUCTS SECTION ===== -->
+    <section class="products">
+      <h2>Available Products</h2>
+      <div class="product-list">
+
+        <div class="product">
+          <img src="images/download.jpg" alt="iPhone 15">
+          <h3>Apple iPhone 15</h3>
+          <p class="desc">Dynamic Island | A16 Bionic | 48MP Camera</p>
+          <p class="price">$999</p>
+          <button onclick="addToCart('Apple iPhone 15', 999)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+          <img src="images/samsung.jpg" alt="Galaxy S24">
+          <h3>Samsung Galaxy S24</h3>
+          <p class="desc">Snapdragon 8 Gen 3 | 256GB | 50MP Camera</p>
+          <p class="price">$899</p>
+          <button onclick="addToCart('Samsung Galaxy S24', 899)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+          <img src="images/piexel8.jpg" alt="Pixel 8">
+          <h3>Google Pixel 8</h3>
+          <p class="desc">Tensor G3 | Titan M2 Security | 128GB</p>
+          <p class="price">$799</p>
+          <button onclick="addToCart('Google Pixel 8', 799)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+          <img src="images/oneplus 12.jpg" alt="OnePlus 12">
+          <h3>OnePlus 12</h3>
+          <p class="desc">SuperVOOC | 16GB RAM | Hasselblad Camera</p>
+          <p class="price">$749</p>
+          <button onclick="addToCart('OnePlus 12', 749)">Add to Cart</button>
+        </div>
+
+      </div>
+
+      <div class="view-cart-container">
+        <button id="viewCartBtn" onclick="toggleCart()">View Cart</button>
+      </div>
+    </section>
+
+    <!-- ===== CART SECTION ===== -->
+    <section class="cart hidden" id="cartSection">
+      <h2>Your Cart</h2>
+      <table id="cartTable">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="cartItems">
+          <!-- Cart items will appear here -->
+        </tbody>
+      </table>
+
+      <div class="cart-total">
+        <h3>Total: $<span id="totalPrice">0</span></h3>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
